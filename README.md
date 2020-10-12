@@ -11,6 +11,8 @@
 
 # CTGAN
 
+Touching here from Saivo
+
 Implementation of our NeurIPS paper [Modeling Tabular data using Conditional GAN](https://arxiv.org/abs/1907.00503).
 
 CTGAN is a GAN-based data synthesizer that can generate synthetic tabular data with high fidelity.
