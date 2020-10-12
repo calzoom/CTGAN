@@ -14,13 +14,13 @@ def _parse_args():
                         help='The CSV file has no header. Discrete columns will be indices.')
 
     parser.add_argument('-m', '--metadata', help='Path to the metadata')
-    parser.add_argument('-d', '--discrete',
+    parser.add_argument('-d', '--discrete', default='building_id,timestamp',
                         help='Comma separated list of discrete columns, no whitespaces')
 
     parser.add_argument('-n', '--num-samples', type=int,
                         help='Number of rows to sample. Defaults to the training data size')
 
-    parser.add_argument('--save', default=None, type=str,
+    parser.add_argument('--save', default='trained_synth', type=str,
                         help='A filename to save the trained synthesizer.')
     parser.add_argument('--load', default=None, type=str,
                         help='A filename to load a trained synthesizer.')
@@ -30,7 +30,7 @@ def _parse_args():
     parser.add_argument("--sample_condition_column_value", default=None, type=str,
                         help="Specify the value of the selected discrete column.")
 
-    parser.add_argument('data', help='Path to training data')
+    parser.add_argument('data', default = '../elec_cleaned.csv', help='Path to training data')
     parser.add_argument('output', help='Path of the output file')
 
     return parser.parse_args()
